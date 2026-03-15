@@ -1,0 +1,42 @@
+[
+  {
+    "id": "narendra-nagar-elite",
+    "name": "Narendra Nagar Elite",
+    "location": "Narendra Nagar, Nagpur",
+    "possession": "Dec 2026",
+    "status": "Ongoing",
+    "coverImage": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "amenities": ["Parking", "CCTV", "Gym"],
+    "description": "Premium 2 & 3 BHK residences designed for mid-segment families with robust construction standards."
+  },
+  {
+    "id": "bajaj-nagar-habitat",
+    "name": "Bajaj Nagar Habitat",
+    "location": "Bajaj Nagar, Nagpur",
+    "possession": "Aug 2025",
+    "status": "Completed",
+    "coverImage": "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+    ],
+    "amenities": ["Parking", "CCTV"],
+    "description": "Well-connected residential community with high-efficiency layouts and certified safety standards."
+  },
+  {
+    "id": "lakadganj-residences",
+    "name": "Lakadganj Residences",
+    "location": "Lakadganj, Nagpur",
+    "possession": "Mar 2027",
+    "status": "Ongoing",
+    "coverImage": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+    "gallery": [],
+    "amenities": ["Parking", "Gym"],
+    "description": "Smartly designed apartments with reliable construction and modern amenities."
+  }
+]

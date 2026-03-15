@@ -1,0 +1,20 @@
+[
+  {
+    "key": "residential",
+    "title": "Residential Construction",
+    "icon": "home",
+    "description": "Premium 2 & 3 BHK residential developments built with structural safety, modern architecture, and long-term durability."
+  },
+  {
+    "key": "commercial",
+    "title": "Commercial Construction",
+    "icon": "building",
+    "description": "High-quality commercial spaces designed for offices, retail, and business growth with strong structural engineering."
+  },
+  {
+    "key": "renovation",
+    "title": "Renovation & Redevelopment",
+    "icon": "tools",
+    "description": "Transforming existing buildings with modern design, improved functionality, and enhanced structural strength."
+  }
+]

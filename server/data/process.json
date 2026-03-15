@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "stepNumber": 1,
+    "title": "Consultation",
+    "description": "Understanding client vision, requirements, and project goals.",
+    "icon": "consultation"
+  },
+  {
+    "id": 2,
+    "stepNumber": 2,
+    "title": "Planning & Design",
+    "description": "Architectural planning, layout design, and approvals.",
+    "icon": "planning"
+  },
+  {
+    "id": 3,
+    "stepNumber": 3,
+    "title": "Material Selection",
+    "description": "Selecting high-quality materials and construction standards.",
+    "icon": "materials"
+  },
+  {
+    "id": 4,
+    "stepNumber": 4,
+    "title": "Construction Execution",
+    "description": "Professional construction following engineering standards.",
+    "icon": "construction"
+  },
+  {
+    "id": 5,
+    "stepNumber": 5,
+    "title": "Quality Inspection",
+    "description": "Strict structural and finishing quality checks.",
+    "icon": "inspection"
+  },
+  {
+    "id": 6,
+    "stepNumber": 6,
+    "title": "Project Delivery",
+    "description": "Final handover of the completed project to the client.",
+    "icon": "delivery"
+  }
+]

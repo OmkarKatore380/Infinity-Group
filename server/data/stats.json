@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "Building",
+    "value": 700,
+    "label": "Premium Residences Delivered"
+  },
+  {
+    "icon": "Users",
+    "value": 90,
+    "label": "Happy Homeowners"
+  },
+  {
+    "icon": "Calendar",
+    "value": 10,
+    "label": "Years of Construction Expertise"
+  },
+  {
+    "icon": "Hammer",
+    "value": 5,
+    "label": "Active Residential Developments"
+  }
+]

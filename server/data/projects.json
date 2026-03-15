@@ -1,0 +1,110 @@
+[
+  {
+    "id": "lakadganj-residences",
+    "name": "Lakadganj Residences",
+    "location": "Lakadganj, Nagpur",
+    "possession": "Mar 2027",
+    "status": "Ongoing",
+    "coverImage": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+    "gallery": [],
+    "amenities": [
+      "Parking",
+      "Gym"
+    ],
+    "description": "Smartly designed apartments with reliable construction and modern amenities.",
+    "fullDescription": "",
+    "primaryImage": "",
+    "secondaryImages": []
+  },
+  {
+    "id": "infinity-punayashlok",
+    "name": "Infinity Punayashlok",
+    "location": "Narendra Nagar",
+    "status": "Completed",
+    "coverImage": "/uploads/projects/image-1773175440714-339220927.jpg",
+    "gallery": [],
+    "amenities": [],
+    "description": "3 bhk, with cctv",
+    "fullDescription": "Earthquake-resistant R.C.C. structure built with red clay bricks\r\nPremium false ceilings provided in all rooms and common areas\r\nDesigner modular kitchen with multi-functional trolley sections\r\nAdvanced 3-tier security with 24/7 CCTV and fire safety systems\r\nHigh-capacity 8-passenger lift with Automatic Rescue Device\r\nExcellent connectivity with proximity to two Metro stations",
+    "primaryImage": "",
+    "secondaryImages": []
+  },
+  {
+    "id": "infinity-glory",
+    "name": "Infinity Glory",
+    "location": "Narendra Nagar",
+    "status": "Ongoing",
+    "coverImage": "/uploads/projects/image-1773210494665-817516098.jpg",
+    "gallery": [],
+    "amenities": [],
+    "description": "Codename Nagpur N.O.W. represents a pinnacle of luxury waterfront living in India’s fastest-growing investment corridor. Perfectly positioned next to the Samruddhi Expressway and the New Nagpur IBFC, this development offers an exclusive opportunity to buy a plot in Nagpur designed for the discerning investor. It is the definitive choice for those seeking high-end property in Nagpur with exponential appreciation potential.",
+    "fullDescription": "Codename Nagpur N.O.W. represents a pinnacle of luxury waterfront living in India’s fastest-growing investment corridor. Perfectly positioned next to the Samruddhi Expressway and the New Nagpur IBFC, this development offers an exclusive opportunity to buy a plot in Nagpur designed for the discerning investor. It is the definitive choice for those seeking high-end property in Nagpur with exponential appreciation potential.",
+    "primaryImage": "",
+    "secondaryImages": []
+  },
+  {
+    "title": "Test Multer Project",
+    "location": "Test City",
+    "status": "completed",
+    "shortDescription": "Test project with multer",
+    "fullDescription": "Full description for testing",
+    "primaryImage": "",
+    "secondaryImages": [],
+    "id": "1773239836019",
+    "name": "Test Multer Project",
+    "coverImage": "",
+    "gallery": [],
+    "amenities": [],
+    "description": ""
+  },
+  {
+    "title": "Test Final Upload Project",
+    "location": "Test City",
+    "status": "completed",
+    "shortDescription": "Test project with final upload system",
+    "fullDescription": "Full description for testing",
+    "primaryImage": "",
+    "secondaryImages": [],
+    "id": "1773240400785",
+    "name": "Test Final Upload Project",
+    "coverImage": "",
+    "gallery": [],
+    "amenities": [],
+    "description": ""
+  },
+  {
+    "title": "jkhjv",
+    "location": "Nagpur",
+    "status": "Ongoing",
+    "shortDescription": "hbbmmb",
+    "fullDescription": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\r\nlllllllllllllllllllllllllllllllllllllll",
+    "primaryImage": "1773240536129-226567009.jpeg",
+    "secondaryImages": [
+      "1773240536133-612866705.jpg",
+      "1773240536144-552300235.jpeg",
+      "1773240536145-855940556.jpeg",
+      "1773240536145-14672796.jpeg"
+    ],
+    "id": "1773240536163",
+    "name": "New infinity",
+    "coverImage": "/uploads/projects/1773246532243-563177650.jpeg",
+    "gallery": [],
+    "amenities": [],
+    "description": "good place "
+  },
+  {
+    "title": "Stability Test Project",
+    "location": "Test City",
+    "status": "completed",
+    "shortDescription": "Stability test project",
+    "fullDescription": "Full description for stability testing",
+    "primaryImage": "",
+    "secondaryImages": [],
+    "id": "1773240968223",
+    "name": "Stability Test Project",
+    "coverImage": "",
+    "gallery": [],
+    "amenities": [],
+    "description": ""
+  }
+]

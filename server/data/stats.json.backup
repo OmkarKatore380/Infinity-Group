@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "🏗",
+    "value": "1000+",
+    "label": "Years Experience"
+  },
+  {
+    "id": 2,
+    "icon": "🏠",
+    "value": "700+",
+    "label": "Happy Families"
+  },
+  {
+    "id": 3,
+    "icon": "📍",
+    "value": "100+",
+    "label": "Projects Completed"
+  },
+  {
+    "id": 4,
+    "icon": "⭐",
+    "value": "99%",
+    "label": "Customer Satisfaction"
+  }
+]
