@@ -747,8 +747,15 @@ export default function Home() {
           </ScrollReveal>
 
           <ScrollReveal>
-            <FounderVisionDockMobile />
-            <FounderVisionDock />
+            {/* Desktop Version - Keep 100% Original */}
+            <div className="hidden md:block">
+              <FounderVisionDock />
+            </div>
+
+            {/* Mobile Version - New Separate File */}
+            <div className="block md:hidden">
+              <FounderVisionDockMobile />
+            </div>
           </ScrollReveal>
         </div>
       </div>
