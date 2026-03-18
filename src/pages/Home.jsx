@@ -149,6 +149,22 @@ export default function Home() {
       .catch(() => setProjects([]))
   }, [])
 
+  // Video error fallback function
+  const handleVideoError = (e) => {
+    const video = e.target;
+    // If video fails, replace with a fallback image
+    if (video && video.parentNode) {
+      const fallbackImg = document.createElement('img');
+      fallbackImg.src = '/poster.jpg'; // Make sure this exists in public folder
+      fallbackImg.alt = 'Construction preview';
+      fallbackImg.className = video.className;
+      fallbackImg.style.objectFit = 'cover';
+      fallbackImg.style.filter = video.style.filter;
+      fallbackImg.style.mixBlendMode = video.style.mixBlendMode;
+      video.parentNode.replaceChild(fallbackImg, video);
+    }
+  };
+
   return (
     <>
       <div className="bg-white">
@@ -162,6 +178,7 @@ export default function Home() {
 
         {/* ================= HERO SECTION ================= */}
         <section className="relative min-h-[90vh] w-full overflow-hidden bg-white flex items-center pt-20">
+          {/* Background grid stays outside the blocks, applies to both */}
           <div 
             className="absolute inset-0 z-0 pointer-events-none"
             style={{
@@ -175,33 +192,95 @@ export default function Home() {
             }}
           />
 
-          <div className="absolute right-12 lg:right-20 top-16 lg:top-24 -translate-y-4 w-full lg:w-2/5 max-w-xl z-0 overflow-hidden aspect-video border-4 border-white">
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105"
-              style={{ filter: 'brightness(1.1) contrast(1.05) saturate(0.9)', mixBlendMode: 'overlay' }}>
-              <source src="/video3.mp4" type="video/mp4" />
-            </video>
+          {/* Desktop version */}
+          <div className="hidden md:block w-full">
+            <div className="absolute right-12 lg:right-20 top-16 lg:top-24 -translate-y-4 w-full lg:w-2/5 max-w-xl z-0 overflow-hidden aspect-video border-4 border-white">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                preload="auto"
+                poster="/poster.jpg" // Add a poster image
+                className="w-full h-full object-cover scale-105"
+                style={{ filter: 'brightness(1.1) contrast(1.05) saturate(0.9)', mixBlendMode: 'overlay' }}
+                onError={handleVideoError}
+              >
+                <source src="/video3.mp4" type="video/mp4" />
+                <source src="/video3.webm" type="video/webm" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            <div className="container-pro relative z-10 px-6 md:px-12 lg:px-20 w-full">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+                <div className="flex-1 text-left relative">
+                  <div className="flex items-center gap-2 -mt-9 mb-8 relative z-10">
+                    <span className="w-1 h-12 bg-yellow-500"></span>
+                    <span className="text-base uppercase tracking-[0.5em] text-slate-500 font-bold max-md:text-sm">Trusted Developer – Nagpur</span>
+                  </div>
+
+                  <img src="/image.png" alt="Reliable Construction" className="w-[95%] mx-0 mb-8 mix-blend-multiply scale-110" style={{ objectFit: 'contain' }} />
+
+                  <p className="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed mb-10 bg-white/80 backdrop-blur-sm lg:bg-transparent rounded-lg p-2 relative z-10 max-md:text-base">
+                    Delivering 2 & 3 BHK premium residences engineered with safety, structural precision, and long-term durability.
+                  </p>
+
+                  <div className="flex flex-wrap gap-5 relative z-10">
+                    <Link to="/projects" className="px-8 py-3 bg-slate-900 text-white rounded-md hover:bg-slate-700 transition-all shadow-xl font-bold uppercase tracking-wider text-sm max-md:px-6 max-md:py-2">Explore Projects</Link>
+                    <Link to="/contact" className="px-8 py-3 border-2 border-slate-900 text-slate-900 rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold uppercase tracking-wider text-sm max-md:px-6 max-md:py-2">Request a Quote</Link>
+                  </div>
+                </div>
+                <div className="flex-1"></div>
+              </div>
+            </div>
           </div>
 
-          <div className="container-pro relative z-10 px-6 md:px-12 lg:px-20 w-full">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-              <div className="flex-1 text-left relative">
-                <div className="flex items-center gap-2 -mt-9 mb-8 relative z-10">
-                  <span className="w-1 h-12 bg-yellow-500"></span>
-                  <span className="text-base uppercase tracking-[0.5em] text-slate-500 font-bold max-md:text-sm">Trusted Developer – Nagpur</span>
-                </div>
+          {/* Mobile version */}
+          <div className="block md:hidden w-full">
+            <div className="container-pro relative z-10 px-4 w-full">
+              {/* Video at top, full width with reduced height */}
+              <div className="w-full max-w-md mx-auto mb-6">
+                <video 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  preload="auto"
+                  poster="/poster.jpg"
+                  className="w-full aspect-video max-h-64 object-cover rounded-lg border-2 border-white"
+                  style={{ filter: 'brightness(1.1) contrast(1.05) saturate(0.9)', mixBlendMode: 'overlay' }}
+                  onError={handleVideoError}
+                >
+                  <source src="/video3.mp4" type="video/mp4" />
+                  <source src="/video3.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
 
-                <img src="/image.png" alt="Reliable Construction" className="w-[95%] mx-0 mb-8 mix-blend-multiply scale-110" style={{ objectFit: 'contain' }} />
+              {/* Trusted Developer line with smaller text and shorter dash */}
+              <div className="flex items-center gap-2 mb-6">
+                <span className="w-1 h-8 bg-yellow-500"></span>
+                <span className="text-xs uppercase tracking-widest text-slate-500 font-bold">Trusted Developer – Nagpur</span>
+              </div>
 
-                <p className="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed mb-10 bg-white/80 backdrop-blur-sm lg:bg-transparent rounded-lg p-2 relative z-10 max-md:text-base">
+              {/* Heading Image with responsive scaling */}
+              <div className="w-full max-w-[90%] mx-auto mb-6">
+                <img src="/image.png" alt="Reliable Construction" className="w-full mix-blend-multiply scale-110" style={{ objectFit: 'contain' }} />
+              </div>
+
+              {/* Description centered with reduced font size */}
+              <div className="text-center mb-8">
+                <p className="text-base text-slate-600 leading-relaxed bg-white/80 backdrop-blur-sm rounded-lg p-4 mx-4">
                   Delivering 2 & 3 BHK premium residences engineered with safety, structural precision, and long-term durability.
                 </p>
-
-                <div className="flex flex-wrap gap-5 relative z-10">
-                  <Link to="/projects" className="px-8 py-3 bg-slate-900 text-white rounded-md hover:bg-slate-700 transition-all shadow-xl font-bold uppercase tracking-wider text-sm max-md:px-6 max-md:py-2">Explore Projects</Link>
-                  <Link to="/contact" className="px-8 py-3 border-2 border-slate-900 text-slate-900 rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold uppercase tracking-wider text-sm max-md:px-6 max-md:py-2">Request a Quote</Link>
-                </div>
               </div>
-              <div className="flex-1"></div>
+
+              {/* Buttons stacked vertically with full width */}
+              <div className="flex flex-col gap-4 w-full max-w-md mx-auto px-4">
+                <Link to="/projects" className="w-full px-6 py-3 bg-slate-900 text-white rounded-md hover:bg-slate-700 transition-all shadow-xl font-bold uppercase tracking-wider text-sm text-center">Explore Projects</Link>
+                <Link to="/contact" className="w-full px-6 py-3 border-2 border-slate-900 text-slate-900 rounded-md hover:bg-slate-900 hover:text-white transition-all font-bold uppercase tracking-wider text-sm text-center">Request a Quote</Link>
+              </div>
             </div>
           </div>
         </section>
