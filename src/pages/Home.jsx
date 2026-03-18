@@ -209,9 +209,9 @@ export default function Home() {
         {/* ================= CONTENT WRAPPER ================= */}
         <div className="relative w-full">
           
-          {/* ================= STATS SECTION ================= */}
+        {/* ================= STATS SECTION ================= */}
 <ScrollReveal>
-<section className="bg-transparent py-24 relative z-20 overflow-hidden">
+<section className="bg-transparent py-12 relative z-20 overflow-hidden px-4">
 
   {/* subtle construction glow background */}
   <div className="absolute inset-0 pointer-events-none">
@@ -227,155 +227,152 @@ export default function Home() {
     viewport={{ once: true, amount: 0.1 }}
   >
 
-    <div className="grid grid-cols-1 gap-8">
-
-      {/* CARD 1 */}
+    {/* HERO CARD - Full Width */}
+    <div className="grid grid-cols-1 gap-8 mb-8">
       <motion.div 
-      variants={itemVariants}
-      className="group bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,68,51,0.25)]">
-
-        <div className="flex items-start gap-4 mb-4">
-
-          <Award size={48} strokeWidth={1.5}
+        variants={itemVariants}
+        whileHover={{ y: -8, scale: 1.01 }}
+        className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)]"
+      >
+        <div className="flex items-center gap-6 mb-6">
+          <Award size={56} strokeWidth={1.5}
           className="text-[#FF4433] drop-shadow-[0_0_10px_rgba(255,68,51,0.6)] flex-shrink-0"/>
 
           <div>
-
-            <div className="text-4xl font-bold bg-gradient-to-r from-[#FF4433] to-orange-500 bg-clip-text text-transparent drop-shadow-[0_5px_12px_rgba(255,68,51,0.4)] max-md:text-3xl">
+            <div className="text-5xl font-bold bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_12px_rgba(255,68,51,0.4)] max-md:text-4xl">
               20+ Years
             </div>
-
-            <p className="text-slate-500 font-medium uppercase tracking-widest text-sm">
+            <p className="text-white font-medium uppercase tracking-widest text-sm mt-1 leading-tight">
               of experience
             </p>
-
           </div>
         </div>
 
-        <div className="flex items-center gap-2 mb-4">
-
-          <Star size={24} strokeWidth={1.5}
+        <div className="flex items-center gap-4 mb-6">
+          <Star size={28} strokeWidth={1.5}
           className="text-[#FF4433] fill-[#FF4433] drop-shadow-[0_0_8px_rgba(255,68,51,0.6)]"/>
-
-          <span className="text-2xl font-bold text-slate-900">4.5/5</span>
-
-          <span className="text-slate-500">Average Rating</span>
-
+          <span className="text-3xl font-bold text-white">4.5/5</span>
+          <span className="text-slate-300">Average Rating</span>
         </div>
 
-        <p className="text-lg font-medium bg-slate-50/60 p-3 rounded-lg text-slate-700 leading-relaxed max-md:text-base">
+        <p className="text-lg font-medium bg-white/10 p-4 rounded-lg text-slate-200 leading-relaxed max-md:text-base">
           Infinity Group in Nagpur is an established real estate developer with multiple under-construction residential projects in prime areas like Narendra Nagar and Pratap Nagar.
         </p>
-
       </motion.div>
-
-
-      {/* CARD 2 */}
-      {stats && stats.length > 0 && (
-      <motion.div 
-      variants={itemVariants}
-      className="group bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,68,51,0.25)]">
-
-        <div className="text-[#FF4433] mb-4 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-          <Building size={48} strokeWidth={1.5}/>
-        </div>
-
-        <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-orange-500 bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)] max-md:text-3xl">
-          <CountUp value={stats[0]?.value}/>
-        </div>
-
-        <p className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-2">
-          {stats[0]?.label}
-        </p>
-
-        <p className="text-base font-medium bg-slate-50/60 p-2 rounded-md text-slate-700 leading-relaxed">
-          Two decades of construction expertise driven by engineering discipline, quality control, and attention to architectural detail.
-        </p>
-
-      </motion.div>
-      )}
-
     </div>
 
+    {/* NUMERIC GRID - 2x2 on Mobile, 4x1 on Desktop */}
+    {stats && stats.length > 0 && (
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        
+        {/* Project Count */}
+        <motion.div 
+          variants={itemVariants}
+          whileHover={{ y: -8, scale: 1.01 }}
+          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+        >
+          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+            <Building size={32} md:size={48} strokeWidth={1.5}/>
+          </div>
+          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+            <CountUp value={stats[0]?.value}/>
+          </div>
+          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
+            {stats[0]?.label}
+          </p>
+          <div className="hidden md:block">
+            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+              Two decades of construction expertise driven by engineering discipline, quality control, and attention to architectural detail.
+            </p>
+          </div>
+          <div className="block md:hidden">
+            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+              Premium developments in prime locations.
+            </p>
+          </div>
+        </motion.div>
 
-    {/* LOWER 3 CARDS */}
-    {stats && stats.length > 3 && (
+        {/* Families Count */}
+        <motion.div 
+          variants={itemVariants}
+          whileHover={{ y: -8, scale: 1.01 }}
+          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+        >
+          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+            <Users size={32} md:size={48} strokeWidth={1.5}/>
+          </div>
+          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+            <CountUp value={stats[1]?.value}/>
+          </div>
+          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
+            {stats[1]?.label}
+          </p>
+          <div className="hidden md:block">
+            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+              Crafted with structural precision and premium materials, our residences redefine modern living in Nagpur's most sought-after neighbourhoods.
+            </p>
+          </div>
+          <div className="block md:hidden">
+            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+              Trusted by homeowners for quality living.
+            </p>
+          </div>
+        </motion.div>
 
-    <div className="grid grid-cols-1 gap-8 mt-8">
+        {/* Timeline Count */}
+        <motion.div 
+          variants={itemVariants}
+          whileHover={{ y: -8, scale: 1.01 }}
+          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+        >
+          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+            <Calendar size={32} md:size={48} strokeWidth={1.5}/>
+          </div>
+          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+            <CountUp value={stats[2]?.value}/>
+          </div>
+          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
+            {stats[2]?.label}
+          </p>
+          <div className="hidden md:block">
+            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+              Over the years, families have trusted Infinity Group for reliability, transparency, and homes built with long-term value in mind.
+            </p>
+          </div>
+          <div className="block md:hidden">
+            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+              Reliability and transparency since day one.
+            </p>
+          </div>
+        </motion.div>
 
-      {/* CARD */}
-      <motion.div 
-      variants={itemVariants}
-      className="group bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,68,51,0.25)]">
-
-        <div className="text-[#FF4433] mb-4 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-          <Users size={48} strokeWidth={1.5}/>
-        </div>
-
-        <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-orange-500 bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)] max-md:text-3xl">
-          <CountUp value={stats[1]?.value}/>
-        </div>
-
-        <p className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-2">
-          {stats[1]?.label}
-        </p>
-
-        <p className="text-base font-medium bg-slate-50/60 p-2 rounded-md text-slate-700 leading-relaxed">
-          Crafted with structural precision and premium materials, our residences redefine modern living in Nagpur's most sought-after neighbourhoods.
-        </p>
-
-      </motion.div>
-
-
-      {/* CARD */}
-      <motion.div 
-      variants={itemVariants}
-      className="group bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,68,51,0.25)]">
-
-        <div className="text-[#FF4433] mb-4 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-          <Calendar size={48} strokeWidth={1.5}/>
-        </div>
-
-        <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-orange-500 bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)] max-md:text-3xl">
-          <CountUp value={stats[2]?.value}/>
-        </div>
-
-        <p className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-2">
-          {stats[2]?.label}
-        </p>
-
-        <p className="text-base font-medium bg-slate-50/60 p-2 rounded-md text-slate-700 leading-relaxed">
-          Over the years, families have trusted Infinity Group for reliability, transparency, and homes built with long-term value in mind.
-        </p>
-
-      </motion.div>
-
-
-      {/* CARD */}
-      <motion.div 
-      variants={itemVariants}
-      className="group bg-white rounded-2xl p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,68,51,0.25)]">
-
-        <div className="text-[#FF4433] mb-4 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-          <Hammer size={48} strokeWidth={1.5}/>
-        </div>
-
-        <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-orange-500 bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)] max-md:text-3xl">
-          <CountUp value={stats[3]?.value}/>
-        </div>
-
-        <p className="text-slate-500 font-medium uppercase tracking-widest text-sm mb-2">
-          {stats[3]?.label}
-        </p>
-
-        <p className="text-base font-medium bg-slate-50/60 p-2 rounded-md text-slate-700 leading-relaxed">
-          Our active developments are shaping vibrant residential communities designed for comfort, connectivity, and lasting quality.
-        </p>
-
-      </motion.div>
-
-    </div>
-
+        {/* Construction Count */}
+        <motion.div 
+          variants={itemVariants}
+          whileHover={{ y: -8, scale: 1.01 }}
+          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+        >
+          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+            <Hammer size={32} md:size={48} strokeWidth={1.5}/>
+          </div>
+          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+            <CountUp value={stats[3]?.value}/>
+          </div>
+          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
+            {stats[3]?.label}
+          </p>
+          <div className="hidden md:block">
+            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+              Our active developments are shaping vibrant residential communities designed for comfort, connectivity, and lasting quality.
+            </p>
+          </div>
+          <div className="block md:hidden">
+            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+              Building vibrant, connected communities.
+            </p>
+          </div>
+        </motion.div>
+      </div>
     )}
 
   </motion.div>
