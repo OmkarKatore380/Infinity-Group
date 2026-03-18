@@ -261,119 +261,110 @@ export default function Home() {
       </motion.div>
     </div>
 
-    {/* NUMERIC GRID - 2x2 on Mobile, 4x1 on Desktop */}
-    {stats && stats.length > 0 && (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        
-        {/* Project Count */}
-        <motion.div 
-          variants={itemVariants}
-          whileHover={{ y: -8, scale: 1.01 }}
-          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
-        >
-          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-            <Building size={32} md:size={48} strokeWidth={1.5}/>
-          </div>
-          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
-            <CountUp value={stats[0]?.value}/>
-          </div>
-          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
-            {stats[0]?.label}
-          </p>
-          <div className="hidden md:block">
-            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
-              Two decades of construction expertise driven by engineering discipline, quality control, and attention to architectural detail.
-            </p>
-          </div>
-          <div className="block md:hidden">
-            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
-              Premium developments in prime locations.
-            </p>
-          </div>
-        </motion.div>
+   {/* NUMERIC GRID - 2x2 on Mobile, 4x1 on Desktop */}
+<div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+  
+  {/* Project Count */}
+  <motion.div 
+    variants={itemVariants}
+    whileHover={{ y: -8, scale: 1.01 }}
+    className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+  >
+    <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+      <Building size={32} md:size={48} strokeWidth={1.5}/>
+    </div>
+    <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+      <CountUp value="15+"/>
+    </div>
+    <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">Projects Done</p>
+    <div className="hidden md:block">
+      <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+        Two decades of construction expertise driven by engineering discipline and quality control.
+      </p>
+    </div>
+    <div className="block md:hidden">
+      <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+        Premium developments in prime locations.
+      </p>
+    </div>
+  </motion.div>
 
-        {/* Families Count */}
-        <motion.div 
-          variants={itemVariants}
-          whileHover={{ y: -8, scale: 1.01 }}
-          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
-        >
-          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-            <Users size={32} md:size={48} strokeWidth={1.5}/>
-          </div>
-          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
-            <CountUp value={stats[1]?.value}/>
-          </div>
-          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
-            {stats[1]?.label}
-          </p>
-          <div className="hidden md:block">
-            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
-              Crafted with structural precision and premium materials, our residences redefine modern living in Nagpur's most sought-after neighbourhoods.
-            </p>
-          </div>
-          <div className="block md:hidden">
-            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
-              Trusted by homeowners for quality living.
-            </p>
-          </div>
-        </motion.div>
+  {/* Families Count */}
+  <motion.div 
+    variants={itemVariants}
+    whileHover={{ y: -8, scale: 1.01 }}
+    className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+  >
+    <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+      <Users size={32} md:size={48} strokeWidth={1.5}/>
+    </div>
+    <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+      <CountUp value="500+"/>
+    </div>
+    <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">Happy Families</p>
+    <div className="hidden md:block">
+      <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+        Crafted with structural precision, our residences redefine modern living in Nagpur.
+      </p>
+    </div>
+    <div className="block md:hidden">
+      <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+        Trusted by homeowners for quality living.
+      </p>
+    </div>
+  </motion.div>
 
-        {/* Timeline Count */}
-        <motion.div 
-          variants={itemVariants}
-          whileHover={{ y: -8, scale: 1.01 }}
-          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
-        >
-          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-            <Calendar size={32} md:size={48} strokeWidth={1.5}/>
-          </div>
-          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
-            <CountUp value={stats[2]?.value}/>
-          </div>
-          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
-            {stats[2]?.label}
-          </p>
-          <div className="hidden md:block">
-            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
-              Over the years, families have trusted Infinity Group for reliability, transparency, and homes built with long-term value in mind.
-            </p>
-          </div>
-          <div className="block md:hidden">
-            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
-              Reliability and transparency since day one.
-            </p>
-          </div>
-        </motion.div>
+  {/* Timeline Count */}
+  <motion.div 
+    variants={itemVariants}
+    whileHover={{ y: -8, scale: 1.01 }}
+    className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+  >
+    <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+      <Calendar size={32} md:size={48} strokeWidth={1.5}/>
+    </div>
+    <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+      <CountUp value="20+"/>
+    </div>
+    <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">Years of Trust</p>
+    <div className="hidden md:block">
+      <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+        Families have trusted Infinity Group for reliability and long-term value.
+      </p>
+    </div>
+    <div className="block md:hidden">
+      <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+        Reliability and transparency since day one.
+      </p>
+    </div>
+  </motion.div>
 
-        {/* Construction Count */}
-        <motion.div 
-          variants={itemVariants}
-          whileHover={{ y: -8, scale: 1.01 }}
-          className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
-        >
-          <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
-            <Hammer size={32} md:size={48} strokeWidth={1.5}/>
-          </div>
-          <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
-            <CountUp value={stats[3]?.value}/>
-          </div>
-          <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">
-            {stats[3]?.label}
-          </p>
-          <div className="hidden md:block">
-            <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
-              Our active developments are shaping vibrant residential communities designed for comfort, connectivity, and lasting quality.
-            </p>
-          </div>
-          <div className="block md:hidden">
-            <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
-              Building vibrant, connected communities.
-            </p>
-          </div>
-        </motion.div>
-      </div>
-    )}
+  {/* Construction Count */}
+  <motion.div 
+    variants={itemVariants}
+    whileHover={{ y: -8, scale: 1.01 }}
+    className="group bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(255,68,51,0.1)] border-l-4 border-l-[#FF4433] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(255,68,51,0.25)] h-full flex flex-col justify-between"
+  >
+    <div className="text-[#FF4433] mb-3 drop-shadow-[0_0_10px_rgba(255,68,51,0.5)]">
+      <Hammer size={32} md:size={48} strokeWidth={1.5}/>
+    </div>
+    <div className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#FF4433] to-[#FF8833] bg-clip-text text-transparent drop-shadow-[0_5px_14px_rgba(255,68,51,0.5)]">
+      <CountUp value="5+"/>
+    </div>
+    <p className="text-slate-300 font-medium uppercase tracking-widest text-xs mb-2">Ongoing</p>
+    <div className="hidden md:block">
+      <p className="text-sm font-medium bg-white/10 p-3 rounded-md text-slate-200 leading-relaxed">
+        Our active developments are shaping vibrant residential communities.
+      </p>
+    </div>
+    <div className="block md:hidden">
+      <p className="text-[10px] font-medium bg-white/10 p-2 rounded-md text-slate-200 leading-relaxed">
+        Building vibrant, connected communities.
+      </p>
+    </div>
+  </motion.div>
+</div>
+    
 
   </motion.div>
 </section>
